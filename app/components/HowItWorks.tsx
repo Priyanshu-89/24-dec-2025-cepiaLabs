@@ -31,15 +31,15 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#06685B] py-24">
+    <section className="bg-[#73A6BB] py-24">
       <div className="max-w-7xl mx-auto px-6">
 
       
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#F97C21] mb-4">
+          <h2 className="text-4xl font-bold text-[#0d5776] mb-4">
             How It Works
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <p className="text-[#E9F1F4] max-w-3xl text-[20px] font-semibold mx-auto">
             Get quality healthcare in four simple steps — no waiting rooms, no hassle.
           </p>
         </div>
@@ -51,32 +51,32 @@ export default function HowItWorks() {
             <div key={step.title} className="relative">
 
             
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-[#F97C21] hover:-translate-y-2 transition-all duration-300">
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-[#659ab0] hover:-translate-y-2 transition-all duration-300">
                 
         
-                <div className="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-orange-100 text-[#06685B] flex items-center justify-center font-bold">
+                <div className="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-[#dadada] text-[#06685B] flex items-center justify-center font-bold">
                   {index + 1}
                 </div>
 
              
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#F97C21] text-[#06685B] text-2xl mb-6 group-hover:scale-110 transition">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#0d5776] text-[#E9F1F4] text-2xl mb-6 group-hover:scale-110 transition">
                   {step.icon}
                 </div>
 
              
-                <h3 className="text-xl font-semibold text-[#F97C21] mb-3">
+                <h3 className="text-xl font-semibold text-[#E9F1F4] mb-3">
                   {step.title}
                 </h3>
 
                 
-                <p className="text-sm text-white/80 leading-relaxed">
+                <p className="text-[16px] font-medium text-[#0d5776] leading-relaxed">
                   {step.desc}
                 </p>
               </div>
 
              
               {index < steps.length - 1 && (
-                <div className="hidden md:flex absolute top-1/2 -right-6 transform -translate-y-1/2 text-orange-100 text-3xl pointer-events-none">
+                <div className="hidden md:flex absolute top-1/2 -right-6 transform -translate-y-1/2 text-[#E9F1F4] text-3xl pointer-events-none">
                   <FiArrowRight />
                 </div>
               )}

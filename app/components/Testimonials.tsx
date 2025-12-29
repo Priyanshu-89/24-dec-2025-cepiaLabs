@@ -24,15 +24,15 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#06685B] py-32">
+    <section className="bg-linear-to-br from-[#73A6BB] to-[#3a89ab] py-32">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Header */}
+      
         <div className="text-center mb-24">
-          <h2 className="text-4xl font-bold text-[#F97C21] mb-4">
+          <h2 className="text-4xl font-bold text-[#0d5776] mb-4">
            TESTIMONIALS
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <p className="text-white/80 max-w-3xl text-2xl font-medium mx-auto">
             Real stories from people using our platform every day.
           </p>
         </div>
@@ -43,11 +43,11 @@ export default function Testimonials() {
             <div
               key={t.name}
               className={`
-                relative max-w-2xl
+                relative max-w-xl
                 bg-white/5 backdrop-blur-lg 
                 rounded-2xl px-10 py-3
                 border border-white/10
-                hover:border-[#F97C21]
+                hover:border-[#3a89ab]
                 hover:shadow-2xl
                 transition-all duration-300
                 ${index === 1 ? "ml-16" : ""}
@@ -55,16 +55,16 @@ export default function Testimonials() {
               `}
             >
            
-              <FaQuoteLeft className="absolute top-8 right-8 text-[#F97C21]/20 text-6xl" />
+   
 
           
-              <p className="text-lg text-white/90 leading-relaxed mb-10">
+              <p className="text-xl text-white/90 leading-relaxed mb-10">
                 “{t.text}”
               </p>
 
            
               <div className="flex items-center gap-5">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#F97C21]">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden  bg-[#2f91bb]">
                   <Image
                     src={t.image}
                     alt={t.name}
@@ -74,10 +74,10 @@ export default function Testimonials() {
                 </div>
 
                 <div>
-                  <p className="text-[#F97C21] font-semibold text-lg">
+                  <p className="text-[#0d5776] font-semibold text-xl">
                     {t.name}
                   </p>
-                  <p className="text-sm text-white/60">
+                  <p className="text-[16px] mt-2 text-white/60">
                     {t.role}
                   </p>
                 </div>

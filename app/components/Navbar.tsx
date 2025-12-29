@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { FaStethoscope } from "react-icons/fa";
 import { FiActivity, FiCpu, FiMessageSquare, FiMenu, FiX } from "react-icons/fi";
@@ -15,33 +16,33 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#06685B] backdrop-blur-md border-b border-white/10 shadow-md">
+    <nav className="sticky top-0 z-50 bg-[#73A6BB] backdrop-blur-md border-b border-white/10 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
    
-        <div className="flex items-center gap-2 font-bold text-lg text-white">
-          <FaStethoscope className="text-gradient from-[#F97C21] to-[#FFD700]" />
-          <span className="bg-clip-text text-transparent bg-[#F97C21]">
-            Telehealth
+        <div className="flex items-center gap-2 font-bold text-2xl text-[#E9F1F4]">
+          <FaStethoscope className="text-gradient from-[#E9F1F4] to-[#FFDDFF]" />
+          <span className="bg-clip-text text-transparent bg-[#E9F1F4]">
+            TeleHEALTH
           </span>
         </div>
 
         
-        <ul className="hidden md:flex items-center gap-8 text-sm text-white">
+        <ul className="hidden md:flex items-center gap-8 text-[16px] text-[#E9F1F4]">
           {links.map((link) => (
             <li
               key={link.name}
-              className="flex items-center gap-1 cursor-pointer group relative hover:text-[#F97C21] transition-all duration-300"
+              className="flex items-center gap-1 cursor-pointer group relative hover:text-[#C6DAE5] transition-all duration-300"
             >
               {link.icon} {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F97C21] transition-all group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5  bg-[#C6DAE5] transition-all group-hover:w-full"></span>
             </li>
           ))}
         </ul>
 
     
-        <button className="hidden md:inline-flex bg-[#F97C21] text-[#06685B] px-6 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
+        <Link href={"/"} className="hidden md:inline-flex bg-[#0d5776] text-[#73A6BB] px-6 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
           Get Started
-        </button>
+        </Link>
 
    
         <div className="md:hidden">

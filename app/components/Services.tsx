@@ -12,48 +12,48 @@ const services = [
     title: "Video Consultations",
     desc: "Face-to-face doctor meetings via secure video",
     icon: <FaVideo />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
   {
     title: "Digital Prescriptions",
     desc: "Electronically signed prescriptions delivered instantly",
     icon: <FaFilePrescription />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
   {
     title: "Medical Records",
     desc: "Centralized storage for health documents",
     icon: <FaNotesMedical />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
   {
     title: "Easy Booking",
     desc: "Search doctors and book in real-time",
     icon: <FaCalendarCheck />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
   {
     title: "Drug Interaction Checker",
     desc: "Automated safety alerts for medications",
     icon: <MdOutlineMedicalInformation />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
   {
     title: "HIPAA-Grade Security",
     desc: "Military-grade encryption for data protection",
     icon: <FaShieldAlt />,
-    color: "from-[#F97C21]",
+    color: "from-[#0d5776]",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="relative py-32 bg-linear-to-br from-[#06685B] to-[#043D33] overflow-hidden">
+    <section className="relative py-32 bg-linear-to-br from-[#73A6BB] to-[#3a89ab] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#F97C21] to-[#F97C21] mb-4">
+        <h2 className="text-5xl font-bold  text-[#0d5776] mb-4">
           What We Offer
         </h2>
-        <p className="text-white/80 max-w-3xl mx-auto mb-20">
+        <p className="text-[#dadada] text-xl font-semibold max-w-4xl mx-auto mb-20">
           A complete, secure, and AI-powered telehealth experience designed
           for both patients and doctors.
         </p>
@@ -74,8 +74,8 @@ export default function Services() {
                 {s.icon}
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-2">{s.title}</h3>
-              <p className="text-white/70">{s.desc}</p>
+              <h3 className="text-2xl font-bold text-[#0d5776] mb-2">{s.title}</h3>
+              <p className="text-white/70 text-[18px]">{s.desc}</p>
 
           
               <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-linear-to-br from-white/20 to-white/5 blur-3xl pointer-events-none"></div>

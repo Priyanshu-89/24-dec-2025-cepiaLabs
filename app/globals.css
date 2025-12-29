@@ -1,2 +1,20 @@
 @import "tailwindcss";
 
+::selection{
+    background-color: #0d5776;
+    color: #E2E8F0;
+    padding: 26px;
+ }
+ 
+ body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+   
+    background-color: #b2e0f3;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #0d5776;
+  
+    border-radius: 50px;
+  }
+

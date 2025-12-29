@@ -30,7 +30,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="relative py-24 bg-linear-to-br from-[#06685B] to-[#043D33] overflow-hidden">
+    <section className="relative py-24 bg-linear-to-br from-[#a7ddf4] to-[#0979a9] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
         {stats.map((stat, i) => (
           <div
@@ -49,12 +49,12 @@ export default function Stats() {
             </div>
 
           
-            <p className="text-4xl md:text-5xl font-bold text-[#F97C21] mb-2">
+            <p className="text-4xl md:text-5xl font-bold text-[#0d5776] mb-2">
               {stat.value ? counts[i] : ""}
               {stat.suffix}
             </p>
 
-            <p className="text-sm md:text-base text-white/70">{stat.label}</p>
+            <p className="text-sm md:text-[18px] text-[#dadada]">{stat.label}</p>
           </div>
         ))}
       </div>
