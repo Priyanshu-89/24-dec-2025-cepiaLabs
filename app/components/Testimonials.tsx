@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaQuoteLeft } from "react-icons/fa";
+
 
 const testimonials = [
   {
