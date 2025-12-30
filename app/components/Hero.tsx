@@ -1,47 +1,101 @@
+"use client";
+
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+
+
+const slides = [
+  {
+    image: "/15.png",
+    title: "Quality Healthcare",
+    highlight: "at Your Fingertips",
+    description:
+      "Video consultations, AI-powered insights, and instant digital prescriptions — all from the comfort of your home.",
+  },
+  {
+    image: "/12.png",
+    title: "Talk to Certified Doctors",
+    highlight: "Anytime, Anywhere",
+    description:
+      "Connect with licensed specialists through secure video calls without long hospital waits.",
+  },
+  {
+    image: "/13.png",
+    title: "Smart Health Decisions",
+    highlight: "Powered by AI",
+    description:
+      "Get personalized health insights and recommendations using advanced AI technology.",
+  },
+  {
+    image: "/14.png",
+    title: "Digital Prescriptions",
+    highlight: "Delivered Instantly",
+    description:
+      "Receive verified digital prescriptions and medical reports directly on your device.",
+  },
+];
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000); 
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const { title, highlight, description } = slides[current];
+
   return (
-    <section className="relative bg-linear-to-br from-[#73A6BB] to-[#3a89ab] overflow-hidden py-32">
+    <section className="relative h-screen overflow-hidden">
 
+      <div className="absolute inset-0 z-0">
+        {slides.map((slide, index) => (
+          <Image
+            key={slide.image}
+            src={slide.image}
+            alt={slide.title}
+            fill
+            priority={index === 0}
+            className={`object-cover transition-opacity duration-1000 ${
+              index === current ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12 relative z-10">
-        
-       
-        <div className="text-center md:text-left space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-[#dadada] leading-tight relative">
-            Quality Healthcare <br /> 
-            <span className="relative text-[#0d5776]">
-              at Your Fingertips
+    
+      <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-black/80 z-10" />
 
+  
+      <div className="relative z-20 h-full flex items-center justify-center px-6">
+        <div
+          key={current}
+          className="max-w-4xl text-center space-y-6 animate-fadeUp"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+            {title}
+            <br />
+            <span className="relative inline-block mt-3">
+              <span className="absolute" />
+              <span className="relative text-[#5fb3d6]">
+                {highlight}
+              </span>
             </span>
           </h1>
 
-          <p className="text-[#dadada] max-w-lg text-lg">
-            Video consultations, AI-powered insights, and instant digital prescriptions — all from the comfort of your home.
+          <p className="text-white/85 text-lg md:text-xl max-w-2xl mx-auto">
+            {description}
           </p>
 
-          <button className="group inline-flex items-center gap-3 bg-[#0d5776] text-[#73A6BB] font-semibold px-8 py-3 rounded-full text-lg hover:gap-5 hover:opacity-90 transition-all duration-300 shadow-xl">
+          <button className="group inline-flex items-center gap-3 bg-[#0d5776] text-[#a6d4e6] font-semibold px-10 py-4 rounded-full text-lg hover:gap-5 transition-all duration-300 shadow-2xl">
             Book Consultation Now
-            <FaArrowRight className="transition-transform group-hover:translate-x-1" />
+            <FaArrowRight className="transition-transform group-hover:translate-x-2" />
           </button>
         </div>
-
-        
-        <div className="relative flex justify-center">
-          <Image
-            src="/3.png"
-            alt="Online Doctor Consultation"
-            width={480}
-            height={280}
-            className="rounded-md h-100 shadow-2xl relative z-10"
-            priority
-          />
-
-
-        </div>
-
       </div>
     </section>
   );

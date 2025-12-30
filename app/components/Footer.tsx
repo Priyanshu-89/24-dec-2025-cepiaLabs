@@ -17,7 +17,7 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         
-        <div className="rounded-3xl border border-white/40 bg-[#dadada] backdrop-blur-xl shadow-2xl">
+        <div className="rounded-3xl border border-white/40 bg-[#bfe6f7] backdrop-blur-xl shadow-2xl">
           <div className="grid gap-12 px-8 py-14 md:grid-cols-4">
            
             <div>
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           
-          <div className="mx-8 flex items-center justify-center gap-2 rounded-xl border border-[#97d4ef] bg-[#73A6BB] py-3 text-[16px] font-medium text-[#0d5776]">
+          <div className="mx-8 flex items-center justify-center gap-2 rounded-xl border border-[#97d4ef] bg-[#73A6BB] py-3 text-[16px] font-medium text-[#fdfdfd]">
             <MdHealthAndSafety className="text-lg" />
             HIPAA • SOC 2 Type II • ISO 27001 Certified
           </div>
